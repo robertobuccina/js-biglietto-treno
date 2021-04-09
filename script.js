@@ -1,7 +1,7 @@
 
 
-var kmPercorrenza = parseInt(prompt("Km che si desidera percorrere"));
-var etaPasseggero =parseInt(prompt("età passeggero"));
+var kmPercorrenza = parseFloat(prompt("Km che si desidera percorrere"));
+var etaPasseggero =parseFloat(prompt("età passeggero"));
 var prezzoBiglietto = (kmPercorrenza * 0.21)
 
 
@@ -10,10 +10,12 @@ if (Number.isNaN(kmPercorrenza) || Number.isNaN(prezzoBiglietto)){
 }
 
 if (etaPasseggero >= 65) {
+    var prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.4);
     console.log (prezzoBiglietto - (prezzoBiglietto * 0.4));
 }
 
 if (etaPasseggero <= 18) {
+    var prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto * 0.2);
     console.log (prezzoBiglietto - (prezzoBiglietto * 0.2));
 }
 
